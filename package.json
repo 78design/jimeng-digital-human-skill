@@ -1,11 +1,43 @@
 {
   "name": "jimeng-digital-human-skill",
   "version": "1.0.0",
-  "description": "火山引擎即梦数字人 OmniHuman1.5 API 调用技能",
+  "description": "火山引擎即梦数字人 OmniHuman1.5 API 调用技能 - 根据图片和音频生成数字人说话视频",
   "main": "jimeng.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node example.js",
+    "version": "node scripts/version.js"
   },
-  "keywords": ["jimeng", "digital-human", "omnihuman", "volcengine", "ai", "video"],
-  "license": "MIT"
+  "keywords": [
+    "jimeng",
+    "digital-human",
+    "omnihuman",
+    "volcengine",
+    "火山引擎",
+    "即梦",
+    "数字人",
+    "AI视频",
+    "avatar",
+    "video-generation"
+  ],
+  "author": "田惠 <tianhui@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/78design/jimeng-digital-human-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/78design/jimeng-digital-human-skill/issues"
+  },
+  "homepage": "https://github.com/78design/jimeng-digital-human-skill#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "jimeng.js",
+    "skill.md",
+    ".env.example"
+  ]
 }

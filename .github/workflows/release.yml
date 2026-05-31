@@ -1,0 +1,70 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get version
+        id: version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create release package
+        run: |
+          # 创建临时目录
+          mkdir -p dist
+          
+          # 复制必要文件
+          cp jimeng.js dist/
+          cp skill.md dist/
+          cp .env.example dist/
+          cp README.md dist/
+          cp CHANGELOG.md dist/
+          cp package.json dist/
+          cp LICENSE dist/ || true
+          
+          # 创建压缩包
+          cd dist
+          tar -czvf ../jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.tar.gz *
+          zip -r ../jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.zip *
+          cd ..
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release v${{ steps.version.outputs.version }}
+          body: |
+            ## 即梦数字人 OmniHuman1.5 技能 v${{ steps.version.outputs.version }}
+            
+            ### 下载方式
+            
+            - **压缩包下载**（推荐离线安装）：
+              - [tar.gz](jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.tar.gz)
+              - [zip](jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.zip)
+            
+            - **Git克隆**：
+              ```bash
+              git clone https://github.com/78design/jimeng-digital-human-skill.git
+              ```
+            
+            ### 更新内容
+            
+            查看 [CHANGELOG.md](CHANGELOG.md) 了解详细更新。
+            
+          files: |
+            jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.tar.gz
+            jimeng-digital-human-skill-v${{ steps.version.outputs.version }}.zip
+          draft: false
+          prerelease: false
