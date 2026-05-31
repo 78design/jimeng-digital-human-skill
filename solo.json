@@ -1,0 +1,28 @@
+{
+  "name": "jimeng-digital-human",
+  "version": "1.0.0",
+  "description": "火山引擎即梦数字人 OmniHuman1.5 视频生成技能",
+  "author": "田惠",
+  "license": "MIT",
+  "keywords": ["即梦", "数字人", "OmniHuman", "视频生成", "AI"],
+  "entry": "jimeng.js",
+  "triggers": [
+    "生成数字人视频",
+    "数字人",
+    "即梦",
+    "OmniHuman",
+    "让图片说话"
+  ],
+  "env": {
+    "required": ["VOLCENGINE_ACCESS_KEY_ID", "VOLCENGINE_SECRET_ACCESS_KEY"],
+    "optional": []
+  },
+  "docs": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/78design/jimeng-digital-human-skill"
+  }
+}
