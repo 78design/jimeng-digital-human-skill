@@ -1,3 +1,8 @@
+---
+name: jimeng-digital-human
+description: 调用火山引擎即梦AI的OmniHuman1.5数字人API，根据用户提供的图片和音频生成数字人说话视频。Use when the user asks to generate digital human video, create talking avatar, 生成数字人视频, 数字人, 即梦, OmniHuman, or 让图片说话.
+---
+
 # 即梦数字人 OmniHuman1.5 技能
 
 ## 技能描述
