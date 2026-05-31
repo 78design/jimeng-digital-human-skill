@@ -49,7 +49,17 @@ tar -xzf jimeng-digital-human-skill-v1.0.0.tar.gz
 cd jimeng-digital-human-skill
 ```
 
-### 方式三：npm安装（即将支持）
+### 方式三：SOLO 技能安装（推荐 SOLO 用户）
+
+在 SOLO 中一键安装此技能：
+
+```bash
+npx skills add https://github.com/78design/jimeng-digital-human-skill
+```
+
+安装后，SOLO 会自动识别触发词（如"生成数字人视频"、"数字人"、"即梦"等），直接调用技能。
+
+### 方式四：npm安装（即将支持）
 
 ```bash
 npm install jimeng-digital-human-skill
