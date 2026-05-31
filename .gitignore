@@ -1,0 +1,10 @@
+# 敏感信息 - 绝不上传
+.env
+
+# Node.js
+node_modules/
+
+# 临时文件
+*.tmp
+*.log
+/tmp/

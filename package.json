@@ -1,0 +1,11 @@
+{
+  "name": "jimeng-digital-human-skill",
+  "version": "1.0.0",
+  "description": "火山引擎即梦数字人 OmniHuman1.5 API 调用技能",
+  "main": "jimeng.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["jimeng", "digital-human", "omnihuman", "volcengine", "ai", "video"],
+  "license": "MIT"
+}
